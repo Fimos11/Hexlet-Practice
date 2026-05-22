@@ -1,0 +1,172 @@
+.form__auth__input_block {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+	justify-content: start;
+
+	.form__input_error {
+		color: rgb(236, 153, 153);
+		padding-top: 5px;
+	}
+}
+
+.form__container {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 24px;
+	background:
+		radial-gradient(circle at top, rgba(109, 94, 255, 0.18), transparent 28%),
+		linear-gradient(135deg, #0d1120 0%, #131929 45%, #1d2236 100%);
+
+	.form__auth {
+		width: 100%;
+		max-width: 520px;
+		background: rgba(12, 17, 34, 0.93);
+		display: flex;
+		flex-direction: column;
+		z-index: 10;
+		border-radius: 22px;
+		padding: 32px;
+		box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+
+		&_title {
+			color: #e8edf8;
+			font-size: 30px;
+			margin-bottom: 18px;
+			letter-spacing: 0.02em;
+		}
+
+		&__input__container {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+
+			.form__auth__input_wrapper {
+				display: flex;
+				align-items: center;
+				background: rgba(255, 255, 255, 0.08);
+				border-radius: 14px;
+				padding: 0 16px;
+				height: 54px;
+				width: 100%;
+				box-sizing: border-box;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				transition:
+					border-color 0.25s ease,
+					background-color 0.25s ease;
+
+				.form__auth__input_logo {
+					width: 22px;
+					height: 22px;
+					margin-right: 12px;
+				}
+
+				.form__input_with_logo {
+					flex: 1;
+					max-width: 370px;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					background: transparent;
+					color: #f8fbff;
+				}
+
+				.form__input_with_logo:focus {
+					outline: none;
+				}
+
+				.form__input_with_logo.input-error {
+					border: 2px solid rgb(236, 153, 153);
+					border-radius: 8px;
+				}
+
+				.form__auth_password_icon {
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+					margin-left: 10px;
+				}
+			}
+
+			.form__auth__button {
+				width: 100px;
+				height: 50px;
+				border-radius: 10px;
+				background: white;
+				border: none;
+				cursor: pointer;
+			}
+		}
+
+		.form__button__container {
+			display: flex;
+			flex-direction: column;
+			margin-top: 18px;
+			justify-content: center;
+			align-items: center;
+			gap: 12px;
+		}
+
+		.form__primary__button {
+			text-align: center;
+			width: 100%;
+			padding: 14px 16px;
+			border-radius: 14px;
+			background: #6d5eff;
+			color: white;
+			text-decoration: none;
+			border: none;
+			cursor: pointer;
+			font-weight: 700;
+			box-shadow: 0 10px 24px rgba(109, 94, 255, 0.28);
+			transition:
+				transform 0.24s ease,
+				background-color 0.24s ease;
+		}
+
+		.form__primary__button:hover:not(:disabled) {
+			transform: translateY(-1px);
+			background: #5a4bea;
+		}
+
+		.form__primary__button:disabled {
+			background: #cccccc;
+			color: #666666;
+			cursor: not-allowed;
+		}
+
+		.form__secondary__button {
+			text-align: center;
+			padding: 12px 16px;
+			border-radius: 14px;
+			background: rgba(255, 255, 255, 0.08);
+			color: #d8dbed;
+			text-decoration: none;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+		}
+
+		.form__secondary__button:hover {
+			background: rgba(255, 255, 255, 0.16);
+		}
+
+		.form__input_error_server {
+			color: rgb(236, 153, 153);
+			text-align: center;
+			padding-top: 12px;
+			font-weight: 600;
+		}
+
+		.text__ps {
+			color: #b5b8cd;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 16px;
+		}
+	}
+}

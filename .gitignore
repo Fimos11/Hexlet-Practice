@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+/node_modules/
+/dist/
+/build/
+/vendor/
+/.idea/
+/.vscode/
+*.log
+
+.env
+.env.*
+venv/
+env/

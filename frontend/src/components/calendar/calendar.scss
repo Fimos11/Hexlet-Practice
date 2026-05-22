@@ -1,0 +1,143 @@
+.calendar__wrapper {
+	position: relative;
+	font-family: Arial, sans-serif;
+	user-select: none;
+	width: 500px;
+	.input-error {
+		color: red;
+	}
+}
+
+.calendar__input__container {
+	display: flex;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 6px 8px;
+	background-color: #fff;
+	cursor: text;
+	gap: 8px;
+
+	input.calendar__input {
+		flex-grow: 1;
+		border: none;
+		outline: none;
+		font-size: 14px;
+		color: #333;
+		background: transparent;
+		cursor: text;
+	}
+
+	img {
+		width: 24px;
+		height: 24px;
+		cursor: pointer;
+		user-select: none;
+	}
+}
+
+.calendar__popup {
+	position: absolute;
+	top: calc(100% + 6px);
+	left: 0;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	width: 100%;
+	padding: 8px;
+}
+
+.calendar__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	padding-top: 12px;
+	padding-bottom: 18px;
+	button {
+		background: none;
+		border: none;
+		font-size: 18px;
+		cursor: pointer;
+		color: #555;
+		padding: 4px 8px;
+		border-radius: 4px;
+		transition: background-color 0.2s;
+
+		&:hover:not(:disabled) {
+			background-color: #eee;
+		}
+
+		&:disabled {
+			color: #ccc;
+			cursor: default;
+		}
+	}
+
+	span {
+		font-weight: 600;
+		font-size: 14px;
+		color: #222;
+	}
+}
+
+.calendar__table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+
+	thead th {
+		font-weight: 600;
+		font-size: 12px;
+		color: #666;
+		padding: 6px 0;
+		text-align: center;
+	}
+
+	tbody td {
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+		height: 32px;
+	}
+}
+
+.calendar__cell {
+	padding: 2px;
+}
+
+.calendar__day {
+	width: 28px;
+	height: 28px;
+	border: none;
+	background: transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #333;
+	transition: background-color 0.2s, color 0.2s;
+
+	&:hover:not(:disabled) {
+		background-color: #007bff;
+		color: white;
+	}
+
+	&.selected {
+		background-color: #0056b3;
+		color: white;
+		font-weight: 700;
+	}
+
+	&:disabled {
+		cursor: default;
+		color: #bbb;
+	}
+}
+
+.calendar__empty-cell {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+}

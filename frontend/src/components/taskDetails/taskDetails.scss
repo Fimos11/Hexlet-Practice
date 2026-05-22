@@ -1,0 +1,45 @@
+.task-details-container {
+	padding: 2rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.task-details-card {
+	background-color: #f5f5f5;
+	border-radius: 12px;
+	padding: 2rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.task-fulltext {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.task-date {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	color: #555;
+}
+
+.task-status {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.task-completed {
+	color: green;
+	font-weight: bold;
+}
+
+.task-pending {
+	color: orange;
+	font-weight: bold;
+}
